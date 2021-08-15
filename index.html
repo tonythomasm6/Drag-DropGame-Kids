@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <div id="full_body">
+      <div class="grid_container">
+        <div class="title1">
+          <img id="happpy" width="150" src="images/GoodTeeth.png" />
+        </div>
+        <div></div>
+        <div class="title2">
+          <img id="sad" src="images/badTeeth.png" width="150" />
+        </div>
+        <div
+          class="box"
+          id="box1"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <div class=""></div>
+        <div
+          class="box"
+          id="box2"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <div
+          class="box"
+          id="box3"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <div class=""></div>
+        <div
+          class="box"
+          id="box4"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <div
+          class="box"
+          id="box5"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <div class=""></div>
+        <div
+          class="box"
+          id="box6"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+
+        <div class="images">
+          <div class="image_row" id="image_row_id">
+            <img
+              class="image bad"
+              id="bad1"
+              src="images/coke.jfif"
+              width="150"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+            <img
+              class="image bad"
+              id="bad2"
+              src="images/icecream.jfif"
+              width="150"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+            <img
+              class="image good"
+              id="good3"
+              src="images/pear.jfif"
+              width="150"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+            <img
+              class="image bad"
+              id="bad3"
+              src="images/lolipop.jfif"
+              width="150"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+            <img
+              class="image good"
+              id="good2"
+              src="images/apple.jfif"
+              width="150"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+
+            <img
+              class="image good"
+              id="good1"
+              src="images/milk.png"
+              width="150"
+              draggable="true"
+              ondragstart="drag(event)"
+            />
+          </div>
+
+          <div id="message_id" style="font-weight: bold; color: red"></div>
+          <br />
+          <button style="font-size: 24px" onclick="reload()">
+            Refresh <i class="fa fa-refresh"></i>
+          </button>
+          <!-- <a href="javascript: reload()">Click to Reload</a> -->
+        </div>
+      </div>
+      <script src="script2.js"></script>
+    </div>
+  </body>
+</html>

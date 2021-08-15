@@ -1,0 +1,128 @@
+.grid_container {
+  padding-top: 10px;
+  background-color: chartreuse;
+  border-radius: 20px;
+  display: grid;
+
+  width: 60vw;
+  /* height: 70vh; */
+
+  grid-template-rows: repeat(4, 17vh);
+  grid-template-columns: 13vw 4vw 13vw;
+
+  justify-items: center; /*Horizontal alignment of box inside grid box*/
+  align-items: center; /*Vertical alignment of box inside grid box*/
+  justify-content: center; /*Alignment of boxes inside container horizontal*/
+  align-content: center;
+
+  gap: 00px 10px;
+  border: solid 2px black;
+
+  /* grid-column: 2/4; */
+  /* grid-row: 2 / span 2; */
+}
+
+.box {
+  /* width: 15vw; */
+  /* height: 15vh; */
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+  border: 0.5px solid dodgerblue;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.images {
+  width: 55vw;
+  height: 25vh;
+  margin-left: 25vw;
+}
+
+.image_row {
+  /* align-items: center;
+  display: flex;
+  justify-content: center; */
+  display: inline-block;
+  /* background-color: #cfcfcf; */
+  background-color: dodgerblue;
+  border-radius: 5px;
+}
+
+.image_row > img {
+  margin: 6px;
+}
+.title {
+  width: 100%;
+  height: 100%;
+  /* border: 0.5px solid dodgerblue; */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#box1,
+#box2,
+#box3,
+#box4,
+#box5,
+#box6 {
+  border-right: solid 2px red;
+  border-left: solid 2px red;
+  box-shadow: 5px 5px 6px #cfcfcf;
+}
+
+#box5,
+#box6 {
+  border-bottom: solid 2px red;
+  margin-bottom: 50px;
+}
+
+#box1,
+#box2 {
+  border-top: solid 2px red;
+}
+
+/*Button*/
+button {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #4eb5f1;
+  text-align: center;
+  transition: all 0.2s;
+  margin-top: 5px;
+}
+
+a.button3:hover {
+  background-color: #4095c6;
+}
+@media all and (max-width: 30em) {
+   button {
+    display: block;
+    margin: 0.2em auto;
+  }
+}
+
+.image {
+  display: inline-block;
+}
+
+/*To make mobile friendly*/
+/* #coke {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+} */
+
+/* img {
+  position: absolute;
+} */

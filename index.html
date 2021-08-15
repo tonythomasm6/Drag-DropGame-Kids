@@ -20,11 +20,11 @@
     <div id="full_body">
       <div class="grid_container">
         <div class="title1">
-          <img id="happpy" width="150" src="images/GoodTeeth.png" />
+          <img id="happy" width="150" />
         </div>
         <div></div>
         <div class="title2">
-          <img id="sad" src="images/badTeeth.png" width="150" />
+          <img id="sad" width="150" />
         </div>
         <div
           class="box"
@@ -71,7 +71,6 @@
             <img
               class="image bad"
               id="bad1"
-              src="images/coke.jfif"
               width="150"
               draggable="true"
               ondragstart="drag(event)"
@@ -79,7 +78,6 @@
             <img
               class="image bad"
               id="bad2"
-              src="images/icecream.jfif"
               width="150"
               draggable="true"
               ondragstart="drag(event)"
@@ -87,7 +85,6 @@
             <img
               class="image good"
               id="good3"
-              src="images/pear.jfif"
               width="150"
               draggable="true"
               ondragstart="drag(event)"
@@ -95,7 +92,6 @@
             <img
               class="image bad"
               id="bad3"
-              src="images/lolipop.jfif"
               width="150"
               draggable="true"
               ondragstart="drag(event)"
@@ -103,7 +99,6 @@
             <img
               class="image good"
               id="good2"
-              src="images/apple.jfif"
               width="150"
               draggable="true"
               ondragstart="drag(event)"
@@ -112,22 +107,35 @@
             <img
               class="image good"
               id="good1"
-              src="images/milk.png"
               width="150"
               draggable="true"
               ondragstart="drag(event)"
             />
           </div>
-
-          <div id="message_id" style="font-weight: bold; color: red"></div>
           <br />
+          <div id="success_message" class="success_msg_class">
+            <img class="" id="happyImage" width="150" />
+            <div>Congratz. You are correct !!!!!</div>
+          </div>
+          <div id="fail_message" class="fail_msg_class">
+            <img class="" id="sadImage" width="150" />
+            <div>Sorry!! Try again</div>
+          </div>
+          <br />
+          <button style="font-size: 24px" onclick="submit()">
+            Submit <i class="fa fa-arrow-circle-right fa-lg"></i>
+          </button>
           <button style="font-size: 24px" onclick="reload()">
             Refresh <i class="fa fa-refresh"></i>
           </button>
           <!-- <a href="javascript: reload()">Click to Reload</a> -->
         </div>
       </div>
-      <script src="script2.js"></script>
+
+      <script src="script.js"></script>
+    </div>
+    <div class="mobile_screen_class">
+      Please open on browser to play game!!!
     </div>
   </body>
 </html>

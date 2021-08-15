@@ -3,7 +3,37 @@
 let html;
 window.onload = function () {
   html = document.getElementById("full_body").innerHTML;
+  loadImages();
 };
+
+function loadImages() {
+  document.getElementById("success_message").style.display = "none";
+
+  document.getElementById("fail_message").style.display = "none";
+
+  const titleImage1 = document.getElementById("happy");
+  titleImage1.src = "images/GoodTeeth.png";
+  const titleImage2 = document.getElementById("sad");
+  titleImage2.src = "images/badTeeth.png";
+
+  const image1 = document.getElementById("bad1");
+  image1.src = "images/coke.jfif";
+  const image2 = document.getElementById("bad2");
+  image2.src = "images/icecream.jfif";
+  const image3 = document.getElementById("bad3");
+  image3.src = "images/lolipop.jfif";
+  const image4 = document.getElementById("good1");
+  image4.src = "images/pear.jfif";
+  const image5 = document.getElementById("good2");
+  image5.src = "images/apple.jfif";
+  const image6 = document.getElementById("good3");
+  image6.src = "images/milk.png";
+
+  const happyImage = document.getElementById("happyImage");
+  happyImage.src = "images/happychild.png";
+  const sadImage = document.getElementById("sadImage");
+  sadImage.src = "images/sadchild.png";
+}
 
 // JS
 function allowDrop(event) {
@@ -17,14 +47,16 @@ function drop(event) {
   var data = event.dataTransfer.getData("text");
   event.target.appendChild(document.getElementById(data));
   //replace $ with jQuery for wordpress
-  if (
-    $("#box1").find("#cat").length == 1 &&
-    $("#box3").find("#dog").length == 1 &&
-    $("#box5").find("#fish").length == 1
-  ) {
-    alert("CORRECT!");
-  }
+}
 
+function reload() {
+  var container = document.getElementById("full_body");
+  container.innerHTML = html;
+  loadImages();
+  // document.getElementById("image_row_id").style.display = "none";
+}
+
+function submit() {
   if (
     $("#box1").find(".good").length == 1 &&
     $("#box3").find(".good").length == 1 &&
@@ -34,16 +66,12 @@ function drop(event) {
     $("#box6").find(".bad").length == 1
   ) {
     alert("hurrayyyy!");
-    document.getElementById("message_id").style.display = "show";
-    document.getElementById("message_id").innerHTML =
-      "This is the correct answer";
+    document.getElementById("success_message").style.display = "flex";
+    // document.getElementById("message_id").innerHTML =
+    //   "This is the correct answer";
+  } else {
+    document.getElementById("fail_message").style.display = "flex";
   }
-}
-
-function reload() {
-  var container = document.getElementById("full_body");
-  container.innerHTML = html;
-  // document.getElementById("image_row_id").style.display = "none";
 }
 
 /*To make mobile friendly*/

@@ -65,71 +65,70 @@
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
         ></div>
+      </div>
+      <div class="images">
+        <div class="image_row" id="image_row_id">
+          <img
+            class="image bad"
+            id="bad1"
+            width="150"
+            draggable="true"
+            ondragstart="drag(event)"
+          />
+          <img
+            class="image bad"
+            id="bad2"
+            width="150"
+            draggable="true"
+            ondragstart="drag(event)"
+          />
+          <img
+            class="image good"
+            id="good3"
+            width="150"
+            draggable="true"
+            ondragstart="drag(event)"
+          />
+          <img
+            class="image bad"
+            id="bad3"
+            width="150"
+            draggable="true"
+            ondragstart="drag(event)"
+          />
+          <img
+            class="image good"
+            id="good2"
+            width="150"
+            draggable="true"
+            ondragstart="drag(event)"
+          />
 
-        <div class="images">
-          <div class="image_row" id="image_row_id">
-            <img
-              class="image bad"
-              id="bad1"
-              width="150"
-              draggable="true"
-              ondragstart="drag(event)"
-            />
-            <img
-              class="image bad"
-              id="bad2"
-              width="150"
-              draggable="true"
-              ondragstart="drag(event)"
-            />
-            <img
-              class="image good"
-              id="good3"
-              width="150"
-              draggable="true"
-              ondragstart="drag(event)"
-            />
-            <img
-              class="image bad"
-              id="bad3"
-              width="150"
-              draggable="true"
-              ondragstart="drag(event)"
-            />
-            <img
-              class="image good"
-              id="good2"
-              width="150"
-              draggable="true"
-              ondragstart="drag(event)"
-            />
-
-            <img
-              class="image good"
-              id="good1"
-              width="150"
-              draggable="true"
-              ondragstart="drag(event)"
-            />
-          </div>
-          <br />
-          <div id="success_message" class="success_msg_class">
-            <img class="" id="happyImage" width="150" />
-            <div>Congratz. You are correct !!!!!</div>
-          </div>
-          <div id="fail_message" class="fail_msg_class">
-            <img class="" id="sadImage" width="150" />
-            <div>Sorry!! Try again</div>
-          </div>
-          <br />
-          <button style="font-size: 24px" onclick="submit()">
-            Submit <i class="fa fa-arrow-circle-right fa-lg"></i>
-          </button>
-          <button style="font-size: 24px" onclick="reload()">
-            Refresh <i class="fa fa-refresh"></i>
-          </button>
-          <!-- <a href="javascript: reload()">Click to Reload</a> -->
+          <img
+            class="image good"
+            id="good1"
+            width="150"
+            draggable="true"
+            ondragstart="drag(event)"
+          />
         </div>
+        <br />
+        <div id="success_message" class="success_msg_class">
+          <img class="" id="happyImage" width="150" />
+          <div>Congratz. You are correct !!!!!</div>
+        </div>
+        <div id="fail_message" class="fail_msg_class">
+          <img class="" id="sadImage" width="150" />
+          <div>Sorry!! Try again</div>
+        </div>
+        <br />
+        <button style="font-size: 24px" onclick="submit()">
+          Submit <i class="fa fa-arrow-circle-right fa-lg"></i>
+        </button>
+        <button style="font-size: 24px" onclick="reload()">
+          Refresh <i class="fa fa-refresh"></i>
+        </button>
+        <!-- <a href="javascript: reload()">Click to Reload</a> -->
       </div>
 
       <script src="script.js"></script>

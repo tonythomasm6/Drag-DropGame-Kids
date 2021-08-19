@@ -1,10 +1,17 @@
+#full_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .grid_container {
   padding-top: 10px;
   background-color: chartreuse;
   border-radius: 20px;
   display: grid;
 
-  width: 60vw;
+  width: 50vw;
   /* height: 70vh; */
 
   grid-template-rows: repeat(4, 17vh);
@@ -35,9 +42,9 @@
 }
 
 .images {
-  width: 55vw;
-  height: 25vh;
-  margin-left: 25vw;
+  /* width: 55vw; */
+  /* height: 25vh; */
+  margin-left: 0;
 }
 
 .image_row {
@@ -117,6 +124,10 @@ a.button3:hover {
 
 /*Success fail message class*/
 .success_msg_class {
+  opacity: 1;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
   /* display: flex;
   flex-direction: row; */
 }

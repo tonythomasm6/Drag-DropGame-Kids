@@ -37,7 +37,11 @@ function loadImages() {
 
 // JS
 function allowDrop(event) {
-  event.preventDefault();
+  var t = event.target;
+  console.log(t.classList.contains("in_image"));
+  if (!t.classList.contains("in_image")) {
+    event.preventDefault();
+  }
 }
 function drag(event) {
   event.dataTransfer.setData("text", event.target.id);

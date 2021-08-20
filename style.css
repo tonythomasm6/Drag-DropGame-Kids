@@ -24,6 +24,7 @@
 
   gap: 00px 10px;
   border: solid 2px black;
+  overflow: hidden;
 
   /* grid-column: 2/4; */
   /* grid-row: 2 / span 2; */
@@ -39,6 +40,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  overflow: hidden; /*To prevent overlapping of image outside the box*/
 }
 
 .images {
@@ -157,4 +159,12 @@ a.button3:hover {
     font-size: 1.5rem;
     color: red;
   }
+}
+
+/*Classes for successfull selection*/
+.success_selected {
+  border: solid 10px green !important;
+}
+.fail_selected {
+  border: solid 10px red !important;
 }

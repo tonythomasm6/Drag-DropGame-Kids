@@ -38,7 +38,7 @@ function loadImages() {
 // JS
 function allowDrop(event) {
   var t = event.target;
-  console.log(t.classList.contains("in_image"));
+  //To prevent overlapping of images.
   if (!t.classList.contains("in_image")) {
     event.preventDefault();
   }
@@ -51,6 +51,7 @@ function drop(event) {
   var data = event.dataTransfer.getData("text");
   event.target.appendChild(document.getElementById(data));
   //replace $ with jQuery for wordpress
+  checkGrid();
 }
 
 function reload() {
@@ -78,6 +79,38 @@ function submit() {
   }
 }
 
+/*To check if all boxes has images*/
+const checkGrid = function () {
+  if (
+    //To check if all box have data
+    $("#box1").find(".in_image").length == 1 &&
+    $("#box3").find(".in_image").length == 1 &&
+    $("#box5").find(".in_image").length == 1 &&
+    $("#box2").find(".in_image").length == 1 &&
+    $("#box4").find(".in_image").length == 1 &&
+    $("#box6").find(".in_image").length == 1
+  ) {
+    if (
+      //To check if correct option
+      $("#box1").find(".good").length == 1 &&
+      $("#box3").find(".good").length == 1 &&
+      $("#box5").find(".good").length == 1 &&
+      $("#box2").find(".bad").length == 1 &&
+      $("#box4").find(".bad").length == 1 &&
+      $("#box6").find(".bad").length == 1
+    ) {
+      document.querySelectorAll(".box").forEach((item) => {
+        item.classList.add("success_selected");
+        document.getElementById("success_message").style.display = "flex";
+      });
+    } else {
+      document.querySelectorAll(".box").forEach((item) => {
+        item.classList.add("fail_selected");
+        document.getElementById("fail_message").style.display = "flex";
+      });
+    }
+  }
+};
 /*To make mobile friendly*/
 // window.onload = function () {
 //   // find the element that you want to drag.

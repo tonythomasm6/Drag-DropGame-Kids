@@ -17,15 +17,15 @@ function loadImages() {
   titleImage2.src = "images/badTeeth.png";
 
   const image1 = document.getElementById("bad1");
-  image1.src = "images/coke.jfif";
+  image1.src = "images/coke.png";
   const image2 = document.getElementById("bad2");
-  image2.src = "images/icecream.jfif";
+  image2.src = "images/icecream.png";
   const image3 = document.getElementById("bad3");
-  image3.src = "images/lolipop.jfif";
+  image3.src = "images/lolipop.png";
   const image4 = document.getElementById("good1");
-  image4.src = "images/pear.jfif";
+  image4.src = "images/pear.png";
   const image5 = document.getElementById("good2");
-  image5.src = "images/apple.jfif";
+  image5.src = "images/apple.png";
   const image6 = document.getElementById("good3");
   image6.src = "images/milk.png";
 
@@ -70,7 +70,6 @@ function submit() {
     $("#box4").find(".bad").length == 1 &&
     $("#box6").find(".bad").length == 1
   ) {
-    alert("hurrayyyy!");
     document.getElementById("success_message").style.display = "flex";
     // document.getElementById("message_id").innerHTML =
     //   "This is the correct answer";
@@ -111,31 +110,3 @@ const checkGrid = function () {
     }
   }
 };
-/*To make mobile friendly*/
-// window.onload = function () {
-//   // find the element that you want to drag.
-//   var box = document.getElementById("coke");
-
-//   /* listen to the touchMove event,
-//   every time it fires, grab the location
-//   of touch and assign it to box */
-
-//   box.addEventListener("touchmove", function (e) {
-//     // grab the location of touch
-//     var touchLocation = e.targetTouches[0];
-
-//     // assign box new coordinates based on the touch.
-//     box.style.left = touchLocation.pageX + "px";
-//     box.style.top = touchLocation.pageY + "px";
-//   });
-
-//   /* record the position of the touch
-//   when released using touchend event.
-//   This will be the drop position. */
-
-//   box.addEventListener("touchend", function (e) {
-//     // current box position.
-//     var x = parseInt(box.style.left);
-//     var y = parseInt(box.style.top);
-//   });
-// };

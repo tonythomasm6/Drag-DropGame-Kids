@@ -5,71 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
       type="text/javascript"
     ></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
+    <link
+      href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
     <link rel="stylesheet" href="style.css" />
     <style></style>
   </head>
   <body>
     <div id="full_body" class="full_body_class">
       <div class="grid_container">
-        <div class="title1">
-          <img id="happy" width="150" />
+        <div>
+          <img id="happy" style="width: 7vw" alt="" />
         </div>
-        <div></div>
-        <div class="title2">
-          <img id="sad" width="150" />
-        </div>
+        <div><img id="sad" style="width: 7vw" alt="" /></div>
+        <div>Good Guys</div>
+        <div>Bad Guys</div>
         <div
-          class="box"
-          id="box1"
-          ondrop="drop(event)"
-          ondragover="allowDrop(event)"
-        ></div>
-        <div class=""></div>
-        <div
-          class="box"
-          id="box2"
+          class="box good-box"
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
         ></div>
         <div
-          class="box"
-          id="box3"
-          ondrop="drop(event)"
-          ondragover="allowDrop(event)"
-        ></div>
-        <div class=""></div>
-        <div
-          class="box"
-          id="box4"
-          ondrop="drop(event)"
-          ondragover="allowDrop(event)"
-        ></div>
-        <div
-          class="box"
-          id="box5"
-          ondrop="drop(event)"
-          ondragover="allowDrop(event)"
-        ></div>
-        <div class=""></div>
-        <div
-          class="box"
-          id="box6"
+          class="box bad-box"
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
         ></div>
       </div>
+
       <!-- Images to select from-->
       <div class="images">
         <div class="image_row" id="image_row_id">
@@ -118,35 +101,66 @@
           />
         </div>
         <br />
+
+        <!--Success message-->
         <div
           id="success_message"
           class="msg_class success"
           style="display: none"
         >
           <img class="" id="happyImage" width="150" />
-          <div>Well Done !!!!!</div>
+          <div>
+            <p>Well Done !!!!!</p>
+
+            <!--progress bar-->
+            <!-- <div class="container">
+              <div class="row">
+                <div class="progress" style="width: 50%">
+                  <div
+                    class="progress-bar progress-bar-success"
+                    role="progressbar"
+                    aria-valuenow="60"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 60%"
+                  >
+                    <span class="sr-only">60% Complete</span>  
+                  </div>
+                  <span class="progress-type">HTML / HTML5</span> 
+                  <span class="progress-completed">6/10</span>
+                </div>
+              </div>
+            </div> -->
+            -->
+            <!-- progress bar end-->
+          </div>
         </div>
-        <div id="fail_message" class="msg_class fail" style="display: none">
-          <img class="" id="sadImage" width="150" />
-          <div>Sorry!! Try again</div>
-        </div>
-        <br />
-        <!-- <button style="font-size: 24px" onclick="submit()">
+      </div>
+
+      <!--Fail-->
+      <div id="fail_message" class="msg_class fail" style="display: none">
+        <img class="" id="sadImage" width="150" />
+        <div>Sorry!! Try again</div>
+      </div>
+      <br />
+      <div class="buttons-class">
+        <button style="font-size: 24px" onclick="submit()" id="submit-button">
           Submit <i class="fa fa-arrow-circle-right fa-lg"></i>
-        </button> -->
+        </button>
         <button
           style="font-size: 24px; display: none"
           onclick="reload()"
           id="button_refresh"
+          class="button_refresh_class"
         >
           Replay <i class="fa fa-refresh"></i>
         </button>
-        <!-- <a href="javascript: reload()">Click to Reload</a> -->
       </div>
+      <!-- <a href="javascript: reload()">Click to Reload</a> -->
 
       <script src="script.js"></script>
     </div>
-    <div class="mobile_screen_class">
+    <div class="mobile_screen_class" id="mobile_section">
       Please open on larger screen to play game!!!
     </div>
   </body>

@@ -4,52 +4,62 @@
   justify-content: center;
   align-items: center;
 
-  animation: fadeInLeft; /*referring directly to the animation's @keyframe declaration*/
-  animation-duration: 3s;
+  /* animation: fadeInLeft; 
+  animation-duration: 3s; */
 }
 
 .grid_container {
-  padding-top: 10px;
+  /* padding-top: 10px; */
   border: 1px solid black;
-  /* background-color: chartreuse; */
-  /* background-color: #67cf00; */
-  /* background-color: #fbd8b3; */
   border-radius: 20px;
   display: grid;
 
-  width: 50vw;
+  /* width: 50vw; */
   /* height: 70vh; */
 
-  grid-template-rows: repeat(4, 17vh);
-  grid-template-columns: 13vw 4vw 13vw;
+  grid-template-columns: 30vw 30vw;
+  grid-template-rows: auto 4vh auto;
 
   justify-items: center; /*Horizontal alignment of box inside grid box*/
-  align-items: center; /*Vertical alignment of box inside grid box*/
+  /*align-items: center;*/ /*Vertical alignment of box inside grid box*/
   justify-content: center; /*Alignment of boxes inside container horizontal*/
   align-content: center;
-
-  gap: 00px 10px;
-  border: solid 2px black;
+  /* gap: 10vw; */
+  grid-column-gap: 10vw;
+  border: solid 2px dodgerblue;
   overflow: hidden;
+  padding: 0 10vh 10vh 10vh;
+}
 
-  /* grid-column: 2/4; */
-  /* grid-row: 2 / span 2; */
+.box > img {
+  padding: 13px;
+  max-width: 12vw;
+  border-radius: 50%;
 }
 
 .box {
-  /* width: 15vw; */
-  /* height: 15vh; */
-  width: 100%;
-  height: 100%;
-  /* background-color: lightblue; */
-  background-color: #d7ebf6;
-  /* border: 0.5px solid dodgerblue; */
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  overflow: hidden; /*To prevent overlapping of image outside the box*/
+  width: 30vw;
+  min-height: 30vh; /*To adjust height to fit all images*/
+  border-radius: 5%;
 }
 
+.good-box {
+  background-color: rgb(226 249 211 / 96%);
+  width: 30vw;
+  border: 2px solid green;
+}
+
+.bad-box {
+  background-color: rgb(241 176 176 / 25%);
+  width: 30vw;
+  border: 2px solid red;
+}
+
+.buttons-class {
+  display: flex;
+}
+
+/**************************************************************************************************************************************/
 .images {
   /* width: 55vw; */
   /* height: 25vh; */
@@ -58,62 +68,20 @@
 }
 
 .image_row {
-  align-items: center;
+  /* align-items: center; */
   display: flex;
   justify-content: center;
   display: inline-block;
   /* background-color: #cfcfcf; */
   background-color: #fdbc76;
   border-radius: 15px;
+  /* width: 60vw; */
 }
 
 .image_row > img {
   margin: 6px;
   border-radius: 50%;
-}
-.title {
-  width: 100%;
-  height: 100%;
-  /* border: 0.5px solid dodgerblue; */
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.box > img {
-  border-radius: 50%;
-  width: 7 0%;
-}
-
-#box1,
-#box2,
-#box3,
-#box4,
-#box5,
-#box6 {
-  /* border-right: solid 2px red; */
-  /* border-left: solid 2px red; */
-  box-shadow: 5px 5px 6px #cfcfcf;
-}
-
-#box5,
-#box6 {
-  /* border-bottom: solid 2px red; */
-  margin-bottom: 50px;
-  border-top: ridge 1px dodgerblue;
-
-  display: flex;
-  justify-content: ;
-}
-
-#box3,
-#box4 {
-  border-top: ridge 1px dodgerblue;
-}
-
-#box1,
-#box2 {
-  /* border-top: solid 2px red; */
+  max-width: 10vw;
 }
 
 /*Button*/
@@ -170,17 +138,6 @@ a.button3:hover {
   color: white;
 }
 
-/*To make mobile friendly*/
-/* #coke {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: #ccc;
-} */
-
-/* img {
-  position: absolute;
-} */
 .mobile_screen_class {
   display: none;
 }
@@ -201,12 +158,12 @@ a.button3:hover {
 .success_selected {
   /* border: solid 5px #00ff00 !important; */
   /* box-shadow: 0 0 10px #00ff00 !important; */
-  box-shadow: 0 0 15px green inset !important;
+  box-shadow: 0 0 25px green inset !important;
 }
 .fail_selected {
   /* border: solid 5px #ff1f1f !important; */
   /* box-shadow: 5px 5px 6px #ff726f !important; */
-  box-shadow: 0 0 15px red inset !important;
+  box-shadow: 0 0 25px red inset !important;
 }
 
 /*Success and fail message css*/
@@ -223,4 +180,15 @@ a.button3:hover {
   margin: 0 0.5rem;
   animation: bounce; /*referring directly to the animation's @keyframe declaration*/
   animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+wr {
+  color: red;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+r {
+  color: green;
+  font-weight: bold;
+  font-size: 2.5rem;
 }

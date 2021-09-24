@@ -35,24 +35,56 @@
   <body>
     <div id="full_body" class="full_body_class">
       <div class="grid_container">
-        <div>
-          <img id="happy" style="width: 7vw" alt="" />
+        <div class="title1">
+          <img id="happy" width="150" />
         </div>
-        <div><img id="sad" style="width: 7vw" alt="" /></div>
-        <div>Good Guys</div>
-        <div>Bad Guys</div>
+        <div></div>
+        <div class="title2">
+          <img id="sad" width="150" />
+        </div>
+        <div class="heading1">Food good for teeth</div>
+        <div></div>
+        <div class="heading2">Food bad for teeth</div>
         <div
-          class="box good-box"
+          class="box"
+          id="box1"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <div class=""></div>
+        <div
+          class="box"
+          id="box2"
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
         ></div>
         <div
-          class="box bad-box"
+          class="box"
+          id="box3"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <div class=""></div>
+        <div
+          class="box"
+          id="box4"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <div
+          class="box"
+          id="box5"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <div class=""></div>
+        <div
+          class="box"
+          id="box6"
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
         ></div>
       </div>
-
       <!-- Images to select from-->
       <div class="images">
         <div class="image_row" id="image_row_id">
@@ -135,18 +167,16 @@
             <!-- progress bar end-->
           </div>
         </div>
-      </div>
 
-      <!--Fail-->
-      <div id="fail_message" class="msg_class fail" style="display: none">
-        <img class="" id="sadImage" width="150" />
-        <div>Sorry!! Try again</div>
-      </div>
-      <br />
-      <div class="buttons-class">
-        <button style="font-size: 24px" onclick="submit()" id="submit-button">
+        <!--Fail-->
+        <div id="fail_message" class="msg_class fail" style="display: none">
+          <img class="" id="sadImage" width="150" />
+          <div>Sorry!! Try again</div>
+        </div>
+        <br />
+        <!-- <button style="font-size: 24px" onclick="submit()">
           Submit <i class="fa fa-arrow-circle-right fa-lg"></i>
-        </button>
+        </button> -->
         <button
           style="font-size: 24px; display: none"
           onclick="reload()"
@@ -155,12 +185,12 @@
         >
           Replay <i class="fa fa-refresh"></i>
         </button>
+        <!-- <a href="javascript: reload()">Click to Reload</a> -->
       </div>
-      <!-- <a href="javascript: reload()">Click to Reload</a> -->
 
       <script src="script.js"></script>
     </div>
-    <div class="mobile_screen_class" id="mobile_section">
+    <div class="mobile_screen_class">
       Please open on larger screen to play game!!!
     </div>
   </body>

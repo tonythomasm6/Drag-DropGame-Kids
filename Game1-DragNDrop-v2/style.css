@@ -1,0 +1,215 @@
+.full_body_class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* animation: fadeInLeft; 
+  animation-duration: 3s; */
+}
+
+.grid_container {
+  /* padding-top: 10px; */
+  border: 1px solid black;
+  border-radius: 20px;
+  display: grid;
+
+  /* width: 50vw; */
+  /* height: 70vh; */
+
+  grid-template-columns: 30vw 30vw;
+  grid-template-rows: auto 4vh auto;
+
+  justify-items: center; /*Horizontal alignment of box inside grid box*/
+  /*align-items: center;*/ /*Vertical alignment of box inside grid box*/
+  justify-content: center; /*Alignment of boxes inside container horizontal*/
+  align-content: center;
+  /* gap: 10vw; */
+  grid-column-gap: 10vw;
+  border: solid 2px dodgerblue;
+  overflow: hidden;
+  padding: 0 10vh 10vh 10vh;
+}
+
+.box > img {
+  padding: 13px;
+  max-width: 12vw;
+  border-radius: 50%;
+}
+
+.box {
+  width: 30vw;
+  min-height: 30vh; /*To adjust height to fit all images*/
+  border-radius: 5%;
+}
+
+.good-box {
+  background-color: rgb(226 249 211 / 96%);
+  width: 30vw;
+  border: 2px solid green;
+}
+
+.bad-box {
+  background-color: rgb(241 176 176 / 25%);
+  width: 30vw;
+  border: 2px solid red;
+}
+
+.buttons-class {
+  display: flex;
+}
+
+/**************************************************************************************************************************************/
+.images {
+  /* width: 55vw; */
+  /* height: 25vh; */
+  margin-left: 0;
+  padding-top: 9px;
+}
+
+.image_row {
+  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  display: inline-block;
+  /* background-color: #cfcfcf; */
+  background-color: #fdbc76;
+  border-radius: 15px;
+  /* width: 60vw; */
+}
+
+.image_row > img {
+  margin: 6px;
+  border-radius: 50%;
+  max-width: 10vw;
+}
+
+/*Button*/
+button {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #428bca;
+  text-align: center;
+  transition: all 0.2s;
+  margin-top: 5px;
+}
+
+.button_back_class{
+  background-color: #6c757d;
+}
+
+.button-link{
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #428bca;
+  text-align: center;
+  transition: all 0.2s;
+  margin-top: 5px;
+}
+
+a.button3:hover {
+  background-color: #4095c6;
+}
+@media all and (max-width: 30em) {
+   button {
+    display: block;
+    margin: 0.2em auto;
+  }
+}
+
+.in_image {
+  display: inline-block;
+}
+
+/*Success fail message class*/
+.msg_class {
+  border: solid 1px black;
+  opacity: 1;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  font-size: 2.5rem;
+  width: 50vw;
+  border-radius: 1%;
+}
+
+.msg_class.success {
+  background-color: lime;
+
+  /* display: flex;
+  flex-direction: row; */
+}
+/*Success fail message class*/
+.msg_class.fail {
+  background-color: red;
+  color: white;
+}
+
+.mobile_screen_class {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  #full_body {
+    display: none;
+  }
+  .mobile_screen_class {
+    display: inline !important;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.5rem;
+    color: red;
+  }
+}
+
+/*Classes for successfull selection*/
+.success_selected {
+  /* border: solid 5px #00ff00 !important; */
+  /* box-shadow: 0 0 10px #00ff00 !important; */
+  /* box-shadow: 0 0 25px green inset !important; */
+}
+.fail_selected {
+  /* border: solid 5px #ff1f1f !important; */
+  /* box-shadow: 5px 5px 6px #ff726f !important; */
+  /* box-shadow: 0 0 25px red inset !important; */
+}
+
+/*Success and fail message css*/
+
+.in_image:hover {
+  transform: scale(1.05);
+}
+
+.left_slide {
+  transform: translate(20px, 20px);
+}
+
+.my-element {
+  margin: 0 0.5rem;
+  animation: bounce; /*referring directly to the animation's @keyframe declaration*/
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+wr {
+  color: red;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+r {
+  color: green;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
